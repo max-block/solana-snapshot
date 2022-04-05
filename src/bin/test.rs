@@ -1,11 +1,7 @@
-use std::time::Duration;
-
-use solana_client::rpc_client::RpcClient;
+use std::time::{Duration, Instant};
 
 fn main() {
-    let client = RpcClient::new_with_timeout("https://api.mainnet-beta.solana.com", Duration::from_secs(3));
-    
-    let res = client.get_highest_snapshot_slot().unwrap();
-    dbg!(res);
+    let now = Instant::now();
+    std::thread::sleep(Duration::from_secs(2));
+    dbg!(now.elapsed().as_millis());
 }
-

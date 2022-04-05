@@ -1084,7 +1084,7 @@ dependencies = [
  "indexmap",
  "slab",
  "tokio",
- "tokio-util",
+ "tokio-util 0.7.1",
  "tracing",
 ]
 
@@ -2216,6 +2216,7 @@ dependencies = [
  "tokio",
  "tokio-native-tls",
  "tokio-rustls",
+ "tokio-util 0.6.9",
  "url",
  "wasm-bindgen",
  "wasm-bindgen-futures",
@@ -3075,14 +3076,17 @@ dependencies = [
 
 [[package]]
 name = "solana-snapshot-downloader"
-version = "0.1.0"
+version = "0.0.1"
 dependencies = [
  "clap 3.1.8",
+ "futures-util",
+ "indicatif",
  "rayon",
  "reqwest",
  "serde",
  "serde_json",
  "solana-client",
+ "tokio",
 ]
 
 [[package]]
@@ -3571,6 +3575,20 @@ dependencies = [
  "tungstenite",
  "webpki",
  "webpki-roots",
+]
+
+[[package]]
+name = "tokio-util"
+version = "0.6.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9e99e1983e5d376cd8eb4b66604d2e99e79f5bd988c3055891dcd8c9e2604cc0"
+dependencies = [
+ "bytes",
+ "futures-core",
+ "futures-sink",
+ "log",
+ "pin-project-lite",
+ "tokio",
 ]
 
 [[package]]
