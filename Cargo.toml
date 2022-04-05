@@ -3,6 +3,9 @@ name = "solana-snapshot-downloader"
 version = "0.0.1"
 edition = "2021"
 default-run = "main"
+description = "Downloads a solana snapshot"
+keywords = ["solana"]
+license = "Unlicense"
 
 [dependencies]
 clap = { version = "3.1.8", features = ["derive"] }
