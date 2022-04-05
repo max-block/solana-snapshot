@@ -1,3 +1,4 @@
 /.idea
 /target
 /tmp
+/src/bin/test.rs

@@ -4,7 +4,7 @@ use solana_client::client_error::ClientError;
 pub enum Error {
     ClintError(String),
     NoGoodNodes,
-    Error(String)
+    Error(String),
 }
 
 impl From<ClientError> for Error {

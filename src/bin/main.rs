@@ -1,6 +1,7 @@
 use clap::Parser;
 
-use solana_snapshot_downloader::{download_snapshot, Params};
+use solana_snapshot_downloader::download_snapshot;
+use solana_snapshot_downloader::model::Params;
 
 /// Download snapshot
 #[derive(Parser)]
@@ -19,6 +20,12 @@ struct Cli {
 
     #[clap(long)]
     silent: bool,
+
+    #[clap(long, default_value = "10")]
+    measure_time: u64,
+
+    #[clap(long, default_value = "10")]
+    measure_count: u8,
 }
 
 impl Cli {
@@ -29,6 +36,8 @@ impl Cli {
             threads: self.threads,
             max_slot_distance: self.max_slot_distance,
             silent: self.silent,
+            measure_time: self.measure_time,
+            measure_count: self.measure_count,
         }
     }
 }

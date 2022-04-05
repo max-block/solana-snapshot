@@ -1,11 +1,15 @@
 [package]
 name = "solana-snapshot-downloader"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
-default-run = "main"
+default-run = "solana-snapshot-downloader"
 description = "Downloads a solana snapshot"
 keywords = ["solana"]
 license = "Unlicense"
+
+[[bin]]
+name = "solana-snapshot-downloader"
+path = "src/bin/main.rs"
 
 [dependencies]
 clap = { version = "3.1.8", features = ["derive"] }
@@ -17,3 +21,4 @@ solana-client = "1.10.5"
 indicatif = "0.16.2"
 tokio = { version = "1.13.0", features = ["full"] }
 futures-util = "0.3.14"
+
